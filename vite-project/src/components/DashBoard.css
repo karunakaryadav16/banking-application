@@ -1,0 +1,512 @@
+.Home_container {
+    height: 100%;
+    width: 100%;
+    padding: 1px;
+    margin: 0px;
+    box-sizing: border-box;
+    display: grid;
+   
+    display: flex;
+    flex-direction: column;
+    position:relative;
+
+}
+
+ul li{
+    list-style-type: none;
+    background-color: silver;
+
+}
+
+a{
+    text-decoration: none !important;
+}
+
+/* main page navbar starts here */
+
+.navbar_container{
+    height:70px;
+    width:100%;
+    background-color: aqua;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    position: sticky;
+    top:1px;
+    z-index: 2;
+}
+
+
+/* main page  navbar ends here */
+
+/* main content starts here */
+
+.below_navbar_content_container{
+    height:calc(100% - 70px);
+    width:100%;
+    display:flex;
+    position: relative;
+    
+}
+
+/* sidebar details start here */
+
+.sidebar{
+
+    height:100%;
+    width:15%;
+    border: solid 1px silver;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* oadditional property adding below to see impact on others */
+   
+
+}
+ul li:hover{
+
+        background-color: gray; /* RGB values for light silver */
+       
+    
+}
+
+details{
+    margin-bottom:20px;
+} 
+
+
+ .spaces{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    padding:10px;
+}
+
+
+
+
+
+.main_content{
+    height:100%;
+    width:calc(100% - 14.88%);
+    display:flex;
+    flex-direction: column;
+    /* border: solid 1px silver; */
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    margin:10px;
+    padding:8px;
+ 
+    /* additional properties */
+  
+
+}
+
+/* table content navbar  section starts here  */
+
+.big_cards_container{
+    height:300px;
+    width:100%;
+    display:flex;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+.big_cards_container div:nth-of-type(1){
+    background-color: palevioletred !important;
+    color:white;
+}
+.big_cards_container div:nth-of-type(2){
+    background-color: lightseagreen !important;
+    color:white;
+}
+.big_cards_container div:nth-of-type(3){
+    background-color: purple !important;
+    color:white;
+}
+.big_cards_container div:nth-of-type(4){
+    background-color: lightgreen !important;
+    color:white;
+}
+.big_cards_container div:nth-of-type(5){
+    background-color: lightgrey !important;
+    color:white;
+}
+.big_cards_container div:nth-of-type(6){
+    background-color: lightcoral !important;
+    color:white;
+}
+.big_cards_container div:nth-of-type(7){
+    background-color: Red !important;
+    color:white;
+}
+.big_cards_container div:nth-of-type(8){
+    background-color: brown !important;
+    color:white;
+}
+
+.big_card{
+    height:90px;
+    width:20%;
+    display:flex;
+    background-color: yellow !important;
+    border:solid 1px silver;
+    margin:5px;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    align-items: center;
+
+    
+}
+
+.fonts{
+font-size: 45px;
+}
+
+.quickaccess_container{
+  height:200px;
+  width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:10px;
+    box-sizing: border-box;
+    padding:10px;
+    
+
+
+}
+
+
+.quickaccess_container div{
+    width:15%;
+    height:25px;
+    margin:5px;
+    box-sizing: border-box;
+}
+.quickaccess_container div:nth-of-type(1){
+    color:white;
+    background-color: red;
+}
+.quickaccess_container div:nth-of-type(2){
+    color:white;
+    background-color: green;
+}
+.quickaccess_container div:nth-of-type(3){
+    color:white;
+    background-color: yellow;
+}
+.quickaccess_container div:nth-of-type(4){
+    color:white;
+    background-color: black;
+}
+.quickaccess_container div:nth-of-type(5){
+    color:white;
+    background-color: lightskyblue;
+}
+.quickaccess_container div:nth-of-type(6){
+    color:white;
+    background-color: green;
+}
+.quickaccess_container div:nth-of-type(7){
+    color:white;
+    background-color: yellow;
+}
+.quickaccess_container div:nth-of-type(8){
+    color:white;
+    background-color: black;
+}
+.quickaccess_container div:nth-of-type(9){
+    color:white;
+    background-color: lightgrey;
+}
+.quickaccess_container div:nth-of-type(10){
+    color:white;
+    background-color: green;
+}
+.quickaccess_container div:nth-of-type(11){
+    color:white;
+    background-color:orange;
+}
+.quickaccess_container div:nth-of-type(12){
+    color:white;
+    background-color: purple;
+}
+.quickaccess_container div:nth-of-type(13){
+    color:white;
+    background-color: skyblue;
+}
+.quickaccess_container div:nth-of-type(14){
+    color:white;
+    background-color:green;
+}.quickaccess_container div:nth-of-type(15){
+    color:white;
+    background-color: skyblue;
+}
+.quickaccess_container div:nth-of-type(16){
+    color:white;
+    background-color: skyblue;
+}
+.quickaccess_container div:nth-of-type(17){
+    color:white;
+    background-color: lightgrey;
+}
+.quickaccess_container div:nth-of-type(18){
+    color:white;
+    background-color: lightseagreen;
+}
+.quickaccess_container div:nth-of-type(19){
+    color:white;
+    background-color: lightgreen;
+}
+.quickaccess_container div:nth-of-type(20){
+    color:white;
+    background-color:orange;
+}
+.quickaccess_container div:nth-of-type(21){
+    color:white;
+    background-color: lightgrey;
+}
+.quickaccess_container div:nth-of-type(22){
+    color:white;
+    background-color: brown;
+}.quickaccess_container div:nth-of-type(23){
+    color:white;
+    background-color: red;
+}
+.quickaccess_container div:nth-of-type(24){
+    color:white;
+    background-color: orange;
+}
+.quickaccess_container div:nth-of-type(25){
+    color:white;
+    background-color: orange;
+}
+
+.images_container{
+    height:auto;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    padding:10px;
+    justify-content: space-around;
+
+
+}
+.images_container select{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    border-bottom-color:lightskyblue ;
+}
+
+.leftimageparentcontainer{
+    display:flex;
+    flex-direction:column !important;
+    margin-right:30px !important;
+    width:100%;
+}
+
+
+
+.leftimagecontainer{
+    display:flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+}
+
+
+.rightsideimagecontainer{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    justify-content: space-around;
+}
+
+.rightsideimageparentcontainer{
+   
+ display:flex;
+ flex-direction: row !important;
+ justify-content: space-evenly;
+ /* justify-content: space-around; */
+    
+}
+
+img{
+    height:300px;
+    width:100%;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+.images_container div:first-of-type{
+    height:30%;
+    width:40%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+}
+
+.leftimagecontainer{
+    display:flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+}
+.leftimageparentcontainer{
+    display:flex;
+    flex-direction: column;
+} */
+
+
+/* 
+
+.images_container div:first-of-type select{
+    border-left: none;
+    border-top: none;
+    border-right:none ;
+    border-bottom-color:lightskyblue ;
+}
+
+.images_container div:first-of-type{
+    width:100%;
+    height:auto;
+}
+
+.images_container div:first-of-type div:only-child{
+    height:30%;
+    width:40%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  table content navbar section ends here  class rules*/
+
+/* .main_content_table_list{
+    height:calc(100%-42px);
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+} */
+
+
+/* table content nabar */
+
+/* .table_content_creation{
+    height:300px;
+    width:100%;
+    margin-top:20px;
+    border:solid 1px lightgray;
+   
+}
+
+
+form{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+form select{
+    height:auto;
+    width:30%;
+    border-top: none;
+    border-left: none;
+    border-right:none;
+    background-color: none;
+    border-bottom-color:aqua !important;
+    background-color: transparent !important;
+}
+
+.cellcreate{
+    border-bottom-color:aqua !important;
+    width:30%;
+
+
+}
+
+
+ */
+
+
+
+
+
