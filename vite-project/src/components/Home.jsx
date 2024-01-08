@@ -1,3 +1,8 @@
+//home component
+import { useDispatch } from 'react-redux';
+import { removeUserDetails } from '../Store.jsx';
+
+
 import React from 'react'
 import "./Home.css"
 import { IoMdHome } from "react-icons/io";
@@ -16,7 +21,26 @@ import { PiNewspaperClippingDuotone } from "react-icons/pi";
  import { IoPersonSharp } from "react-icons/io5";
  import { MdOutlinePersonAddDisabled } from "react-icons/md"
  import { IoSettingsSharp } from "react-icons/io5";
+
+import { useSelector } from 'react-redux';
+
+
+
 function Home() {
+
+
+   const dispatch = useDispatch();
+
+let tabledata = useSelector((t)=>t. user)
+let length = tabledata.length
+
+
+const handleDelete = (Id) => {
+   dispatch(removeUserDetails(Id)); // Dispatching the removeUserDetails action with the Id
+ };
+
+
+
   return (
     <div className='Home_container'>
       <div className='navbar_container'>
@@ -188,7 +212,7 @@ function Home() {
                      <div className='main_content_table_list'>
                               <div className='table_content_navbar'>
                                  <div>
-                                     <button>All&nbsp;({6})</button>&nbsp;&nbsp;&nbsp;<button> Trash&nbsp;({7})</button>
+                                     <button>All&nbsp;({length})</button>&nbsp;&nbsp;&nbsp;<button> Trash&nbsp;({7})</button>
                                  </div> 
                         
 
@@ -198,43 +222,40 @@ function Home() {
 
                               </div>
                                     
-                                <table border="1">
-
-                              <thead >
-                                          <tr>
-                                              <th>Header 1</th>
-                                              <th>Header 2</th>
-                                              <th>Header 3</th>
-                                              <th>Header 4</th>
-                                              <th>Header 4</th>
-
-                                          </tr>
-                              </thead>
-                              <tbody>
-                                      <tr>
-            <td >Row 1, Cell 1</td>
-            <td >Row 1, Cell 1</td>
-            <td >Row 1, Cell 1</td>
-
-            <td>Row 1, Cell 2</td>
-            <td>Row 1, Cell 3</td>
-        </tr>
-                              </tbody>
-                              <tfoot>
-
-                              </tfoot>
-
-                              <tr>
-                              <td >Row 1, Cell 1</td>
-                              <td >Row 1, Cell 1</td>
-                              <td >Row 1, Cell 1</td>
-
-                              <td>Row 1, Cell 2</td>
-                              <td>Row 1, Cell 3</td>       
-
-                              </tr>
-                                </table>
-
+                              <table>
+        <thead>
+          <tr>
+            <th>Checkbox</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tabledata.map((row, index) => (
+            <tr key={row.id}>
+              <td><input type="checkbox" checked={row.checkbox} /></td>
+              <td>{row.name}</td>
+              <td>{row.location}</td>
+              <td>{row.description}</td>
+              <td><button onClick={() => handleEdit(row)}>Edit</button></td>
+              <td><button onClick={() => handleDelete(row.Id)}>Delete</button></td>
+            </tr>
+          ))}
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>Checkbox</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </tfoot>
+      </table>
 
 
                       </div>

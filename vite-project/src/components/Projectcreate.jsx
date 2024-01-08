@@ -1,5 +1,9 @@
 import React from 'react'
 import "./Projectcreate.css"
+import { useDispatch } from 'react-redux';
+import {setUserDetails} from "../Store.jsx";
+import { v4 as uuid } from "uuid";
+
 import { IoMdHome } from "react-icons/io";
 import { BiSolidDownArrowSquare } from "react-icons/bi";
 import {NavLink} from "react-router-dom"
@@ -16,7 +20,25 @@ import { PiNewspaperClippingDuotone } from "react-icons/pi";
  import { IoPersonSharp } from "react-icons/io5";
  import { MdOutlinePersonAddDisabled } from "react-icons/md"
  import { IoSettingsSharp } from "react-icons/io5";
+ import { useState } from 'react';
 function Home() {
+   const dispatch = useDispatch();
+   const [name, setName] = useState('');
+   const [location, setLocation] = useState('');
+   const [description, setDescription] = useState('');
+   const Id = uuid();   
+ 
+   const handleSave = () => {
+     dispatch(setUserDetails({ Id,name, location, description }));
+     setName('');
+     setLocation('');
+     setDescription('');
+     alert('Data saved successfully');
+   };
+
+
+
+
   return (
     <div className='Home_container'>
       <div className='navbar_container'>
@@ -188,22 +210,19 @@ function Home() {
                      <div className='main_content_table_list'>
                               <div className='table_content_creation'>
                                 <h1> Create Project Name</h1>
-                                    <form className='form'>
-                                       <input  className="createinput" type="text" placeholder='Name' required/>
-                                       <input  className="createinput" type="text"  placeholder='Location' required/>
-                                       </form>      
-                                            
+                                <form className='form'>
+        <input value={name} onChange={(e) => setName(e.target.value)} className="createinput" type="text" placeholder='Name' required/>
+        <input value={location} onChange={(e) => setLocation(e.target.value)} className="createinput" type="text" placeholder='Location' required/>
+      </form>
                                                         
-                                            <div >  
-                                            <textarea className='textarea' rows="2" placeholder='Description'>
-                                            </textarea>
-                                            </div>
+      <div>
+        <textarea value={description} onChange={(e) => setDescription(e.target.value)} className='textarea' rows="2" placeholder='Description'></textarea>
+      </div>
                                             
 
                               </div>
                                     
-                            
-
+                              <button onClick={handleSave}>Save</button>
 
 
                       </div>

@@ -91,8 +91,8 @@ details{
     width:calc(100% - 14.88%);
     display:flex;
     flex-direction: column;
-    /* border: solid 1px silver; */
-    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    border: solid 1px silver;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     margin:10px;
  
     /* additional properties */
@@ -131,64 +131,35 @@ details{
     height:calc(100%-42px);
     width: 100%;
     background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-
 
 
 /* table content nabar */
 
-.table_content_creation{
-    height:700px;
+.table_content_navbar{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin:10px;
+    padding:20px;
+
+
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
+
+table{
     width:100%;
-    margin-top:20px;
-    border:solid 2px red;
-   
+    height:100%;
 }
-
-
-
-.table_content_creation div:only-of-type{
-    padding:25px;
+ th, td  tfoot,tbody{
+    border: 2px solid black;
+    padding: 8px;
+    text-align: left;
+    width:40px;
 }
-.table_content_creation div:only-of-type textarea{
-    width:100%;
-    height:calc(100% - 30%);
-    /* color:red; */
-    margin-top:100px;
-}
-
-textarea{
-    height:100px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom-color: silver;
-    margin-left:20px;
-}
-
-
-
-.form{
-    margin-top: 20px !important;
-    display:flex !important;
-    flex-direction: row !important;
-    justify-content: space-evenly !important;
-}
-.createinput{
-    width:45%;
-    height:50px;
-    border-top: none !important;
-    border-left: none;
-    border-right: none;
-}
-button{
-    background-color: green;
-    padding:5px;
-    width:80px;
-}
-
 
 
 

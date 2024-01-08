@@ -1,7 +1,7 @@
-//cell create component
-import React from 'react'
+//trashcomponent component
 
-import "./Cellcreate.css"
+import React from 'react'
+import "./Home.css"
 import { IoMdHome } from "react-icons/io";
 import { BiSolidDownArrowSquare } from "react-icons/bi";
 import {NavLink} from "react-router-dom"
@@ -18,25 +18,7 @@ import { PiNewspaperClippingDuotone } from "react-icons/pi";
  import { IoPersonSharp } from "react-icons/io5";
  import { MdOutlinePersonAddDisabled } from "react-icons/md"
  import { IoSettingsSharp } from "react-icons/io5";
-
- import { useState } from 'react';
-function Cellcreate() {
-const [name, setname] = useState("")
-const[location, setlocation] = useState('');
-const[discription, setdiscription]=useState("");
-
-function Savebutton(){
-   
-
-
-   setname("")
-   setlocation("")
-   setdiscription("")
-}
-
-
-
-
+function Trash() {
   return (
     <div className='Home_container'>
       <div className='navbar_container'>
@@ -52,8 +34,8 @@ function Savebutton(){
               <details>
              <summary className='spaces'><span> <FaProjectDiagram/> &nbsp;Project  </span> <span>+</span></summary>
              <ul>
-                <li><NavLink to="/Home"> All</NavLink></li>
-                <li> <NavLink to="/projectcreate">  create</NavLink></li>
+                <li> <NavLink to="/Home">All</NavLink></li>
+                <li><NavLink to="/projectcreate">create   </NavLink></li>
                 <li> Trashed</li>
              </ul>
               </details>  
@@ -62,7 +44,7 @@ function Savebutton(){
              <summary className='spaces'><span> <FaBoxes/>&nbsp; Product </span> <span> +</span></summary>
              <ul>
                 <li><NavLink to="/Home"> All</NavLink></li>
-                <li> <NavLink to="/productcreate"> create  </NavLink></li>
+                <li> <NavLink to="/productcreate">create   </NavLink></li>
                 <li> Trashed</li>
              </ul>
               </details>  
@@ -71,7 +53,7 @@ function Savebutton(){
              <summary className='spaces'><span> <FaCartShopping/> &nbsp;Sell</span> <span> +</span></summary>
              <ul>
                 <li><NavLink to="/Home"> All</NavLink></li>
-                <li> <NavLink to="/sellcreate"> create   </NavLink></li>
+                <li><NavLink to="sellcreate"> create   </NavLink></li>
                 <li> Trashed</li>
              </ul>
              
@@ -206,92 +188,52 @@ function Savebutton(){
                         
                     </div>
                      <div className='main_content_table_list'>
-                              <div className='table_content_creation'>
-                                <h2> Create Sell manage</h2>
-                                <span> Put Sell Manage Information</span>
-                                    <form className='form'>
-                                    <select id="cars" name="cars">
-                                    <option value="" disabled select> Real</option>
-                                                <option value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="fiat">Fiat</option>
-                                                <option value="audi">Audi</option>
-                                                <option value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="fiat">Fiat</option>
-                                                <option value="audi">Audi</option>
-                                               <option value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="fiat">Fiat</option>
-                                                <option value="audi">Audi</option>
-                                    </select>
-                                    <select id="cars" name="cars">
-                                    <option value="" disabled select>Select Project Name</option>
-                                                <option value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="fiat">Fiat</option>
-                                                <option value="audi">Audi</option>
-                                                <option value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="fiat">Fiat</option>
-                                                <option value="audi">Audi</option>
-                                               <option value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="fiat">Fiat</option>
-                                                <option value="audi">Audi</option>
-                                    </select> <select id="cars" name="cars">
-                                    <option value="" disabled select>Select Product ID</option>
+                              <div className='table_content_navbar'>
+                                 <div>
+                                     <button>All&nbsp;({6})</button>&nbsp;&nbsp;&nbsp;<button> Trash&nbsp;({7})</button>
+                                 </div> 
+                        
 
-                                                <option value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="fiat">Fiat</option>
-                                                <option value="audi">Audi</option>
-                                                <option value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="fiat">Fiat</option>
-                                                <option value="audi">Audi</option>
-                                               <option value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="fiat">Fiat</option>
-                                                <option value="audi">Audi</option>
-                                    </select>
-                                    
-                                     
-                                    
-                                    
-                                    </form>
-
-
-                            <div className='date_container'>         
-                                    <form>
-                                            <select id="cars" name="cars">
-                                                <option value="" disabled select> Select Employee Name</option>
-                                                            <option value="volvo">Volvo</option>
-                                                            <option value="saab">Saab</option>
-                                                            <option value="fiat">Fiat</option>
-                                                            <option value="audi">Audi</option>
-                                                            <option value="volvo">Volvo</option>
-                                                            <option value="saab">Saab</option>
-                                                            <option value="fiat">Fiat</option>
-                                                            <option value="audi">Audi</option>
-                                                        <option value="volvo">Volvo</option>
-                                                            <option value="saab">Saab</option>
-                                                            <option value="fiat">Fiat</option>
-                                                            <option value="audi">Audi</option>
-                                                </select>
-                                            <input   className='cellcreate'  type="date" id="birthday" name="birthday"/>
-
-                                    </form>   
-                            </div>   
-                                            
-
-                                                        
-                                            
+                                <form>
+                                 <input type="search"/>
+                                </form>
 
                               </div>
                                     
-                            
-
+                              <table>
+        <thead>
+          <tr>
+            <th>Checkbox</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {/* {tableData.map((row, index) => (
+            <tr key={index}>
+              <td><input type="checkbox" checked={row.checkbox} /></td>
+              <td>{row.name}</td>
+              <td>{row.location}</td>
+              <td>{row.description}</td>
+              <td><button onClick={() => handleEdit(row)}>Edit</button></td>
+              <td><button onClick={() => handleDelete(index)}>Delete</button></td>
+            </tr>
+          ))} */}
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>Checkbox</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </tfoot>
+      </table>
 
 
                       </div>
@@ -312,10 +254,4 @@ function Savebutton(){
   )
 }
 
-export default Cellcreate
-
-
-
-
-
-
+export default Trash;
